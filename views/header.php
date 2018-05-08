@@ -9,7 +9,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     <script src="<?php echo URL; ?>public/js/jquery.js" type="text/javascript"></script>
     <?php
-		if (isset($this->js)) 
+		if (isset($this->js))
 		{
 			foreach ($this->js as $js)
 			{
@@ -20,35 +20,35 @@
 </head>
 <body>
 <?php Session::init(); ?>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Jong Nederland</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="<?php echo URL; ?>index">Home<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="<?php echo URL; ?>help">Activiteiten</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Informatie</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Over ons</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Trainingen</a>
-            </li>
-        </ul>
-        <ul class="navbar-nav mr-sm-2">
-          <li class="nav-item mr-auto">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #C8E6C9 !important;color:white !important">
+		<div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+          <a class="nav-link" href="<?php echo URL; ?>index">Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<?php echo URL; ?>help">Activiteiten</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Informatie</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Over ons</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Trainingen</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Webshop</a>
+        </li>
+			</ul>
+		</div>
+		<div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
             <?php if(Session::get('loggedIn') == true):?>
 
-            <div class="dropdown mr-auto">
+            <div class="dropdown mx-auto">
               <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="collapse" aria-haspopup="true" aria-expanded="false">
                 Admin
               </button>
@@ -68,9 +68,16 @@
             <a class="nav-link" href="<?php echo URL; ?>login">Login</a>
 
             <?php endif;?>
-          </li>
-        </ul>
+				</li>
+			</ul>
     </div>
-</nav>
+  	<div class="mx-auto order-1">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+		</div>
+  </nav>
+
+
 
 
